@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+<style>
+  body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+  }
+  .main {
+      width: 700px;
+      height: auto;
+      background-color: white;
+      margin: 0 auto;
+  }
+  header {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      align-items: flex-end;
+  }
+  .mail__alert {
+      background: #01409F;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      width: auto;
+  }
+  .email_socials {
+    width: 90%;
+    margin: 4px;
+    height: 100%;
+  }
+  .header_socials {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    height: auto;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px 0px 5px;
+  }
+  .header_socials li img {
+    width: auto;
+    height: 25px;
+    object-fit: cover;
+  }
+  .mail__loss {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      font-family: 'Ibarra Real Nova', serif;
+  }
+  .button-42 a {
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+  }
+
+  /* CSS */
+  .button-42 {
+    width: 90%;
+    margin: -10px 0px 5px 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Ibarra Real Nova', serif;
+    line-height: 40px;
+    outline: 0;
+    overflow: hidden;
+    pointer-events: auto;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    z-index: 9;
+    border: 0;
+    transition: box-shadow .2s;
+    height: 8vw;
+    max-height: 40px;
+  }
+
+  .button-42:hover {
+    box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+  }
+
+  .mail__banner {
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+  }
+  .mail__banner img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      background-color: white;
+      margin-bottom: 4px;
+  }
+  .logo__tape {
+      background-color: #01409F;
+      border-top-left-radius: 20px;
+      display: flex;
+      padding-top: 4px;
+      padding-bottom: 4px;
+  }
+  .logo {
+      display: flex;
+      flex-direction: column;
+      min-width: 60%;
+      height: auto;
+      margin: auto;
+      /* max-height: 10%; */
+  }
+  .logo img {
+    width: 100%;
+    height: 30%;
+  }
+  .news-title {
+      font-size: 22px;
+      text-align: center;
+  }
+  section {
+      display: flex;
+      justify-content: space-between;
+  }
+  .content {
+      width: 65%;
+  }
+  .news {
+      background-color: #f2f2f2;
+      padding: 5px 0px;
+      margin-top: 10px;
+  }
+  .card {
+    background: white;
+    border-radius: 3px;
+    width: 80%;
+    padding: 15px 12px;
+    height: auto;
+    margin: auto;
+    color: white;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .card ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0vw 1vw 0vw 1vw;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .card p {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+  } */
+  .social-layout ul {
+    padding: 0 0 3px 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  .social-layout ul img {
+    width: 24px;
+    object-fit: cover;
+  }
+  .social-layout ul li a {
+    margin: 12px 14px;
+  }
+  .product-title {
+    display: flex;
+    align-items: flex-start;
+  }
+  .short--logo img {
+    width: 100%;
+  }
+  .short--logo {
+    margin-right: 20px;
+  }
+  .short--text-small {
+    font-size: 15px;
+    color: grey;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+  }
+  .short--text-big {
+    font-size: 21px;
+    color: rgb(243, 78, 78);
+    font-weight: bold;
+    margin: 0;
+  }
+  .product--img {
+    width: 200px;
+    object-fit: contain;
+  }
+
+  /* FIXES HANDLE IT  */
+  h6 , p {
+    margin: 0;
+  }
+  /* bold text  */
+  h6 {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .product-content p {
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 3px;
+  }
+  .product-about {
+    display: flex;
+    padding-top: 5px;
+  }
+  .red--notice {
+    display: flex;
+    font-size: 22px;
+    color: #01409F;
+    justify-content: center;
+  }
+  .alert {
+    margin: 20px 0px;
+  }
+  .line {
+    width: 90%;
+    margin: 10px auto 20px auto;
+    height: 2px;
+    background: #01409F;
+  }
+  .country {
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    margin: 5px 0;
+  }
+  footer {
+    border-radius: 4px;
+    padding: 10px;
+    background-color:#01409F;
+  }
+  .main {
+    width: 550px;
+    margin: auto;
+  }
+  .white__icon {
+    width: 15px !important;
+  }
+  
+  .product--img {
+    height: 180px;
+  }
+  .product-content {
+    padding-left: 15px;
+  }
+  .product-content h6 {
+    margin-top: 5px;
+  }
+  section {
+    display: block;
+  }
+  .content {
+    width: auto;
+    margin-top: 10px;
+  }         
+  .short--logo {
+    width: 14%;
+  }
+  .news {
+    width: auto;
+  }
+  .news-title {
+    font-size: 20px;
+  }
+  .service-title ul {
+    display: flex;
+
+    list-style: none;
+  }
+  .service-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+  }
+  .service-list ul {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .service-list ul li {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .strong-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #01409F;
+  }
+  .card-images {
+    width: auto; 
+    height: 20vw; 
+    max-height: 100px;
+    max-width: 100px;
+  }
+  .service-images {
+    width: auto; 
+    height: 20vw; 
+    max-height: 70px;
+    padding: 10px 0px 10px 0px;
+  }
+  .other-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .line-bottom {
+    /* width: 90%; */
+    margin: 20px auto;
+    height: 6px;
+    background: #01409F;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .line-mid {
+    /* width: 90%; */
+    margin: 0px auto;
+    height: 1px;
+    background: #01409F;
+  }
+
+                                                              /* MEDIA BEGINS */
+  @media (max-width: 555px) {
+    .main {
+      width: 90%;
+    }
+    .button-42 a {
+      font-size: 3vw;
+    }
+    .product-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 5px 0px 5px;
+    }
+    .mail__alert {
+      height: 90px;
+    }
+    .product-content {
+      padding: 0;
+    }
+    .card {
+    width: 75%;
+    }
+  }
+  @media (max-width: 490px) {
+    .header_socials li img {
+    height: 25px;
+    }
+    .mail__alert {
+      height: 82px;
+    }
+  }
+  @media (max-width: 415px) {
+    .button-42 a {
+      padding: 4px 10px;
+    }
+    .header_socials li img {
+    height: 20px;
+    }
+    .mail__alert {
+      height: 73px;
+    }
+  }
+  @media (max-width: 380px) {
+    .short--logo {
+    margin-right: 10px;
+    }
+    .button-42 a {
+      padding: 2px 5px;
+    }
+    .header_socials li img {
+    height: 15px;
+    }
+    .mail__alert {
+      height: 65px;
+    }
+  }
+
+</style>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">
+                <img src="https://files.constantcontact.com/d8886d29001/0e7636e9-a450-4523-b676-5c6ee4108356.jpg?rdr=true" alt="logo">
+                <div class="logo__tape"></div>
+            </div>
+            <div class="mail__alert">
+              <div class="button-42">
+                  <a style="display:flex ; align-items:initial ; justify-content: center;" href="https://www.evidenceservices.com/services"><span style="display:flex ; align-items:center;"><img style="width: 18px; margin-right: 5px;" class="white__icon" src="https://files.constantcontact.com/d8886d29001/53524df7-2dd9-41b6-b5ba-9c578a1bf541.png?rdr=true" alt></span> <strong>EMAIL US </strong> </a>
+              </div>
+              <div class="mail__banner">
+                  <img src="https://files.constantcontact.com/d8886d29001/0b26509b-83c9-4ad6-bc38-778b6297332c.png?rdr=true" alt="mail">
+              </div>
+            </div>
+        </header>
+        <section>
+            <div class="content">
+              <div class="product">
+                <div class="product-title">
+                  <div class="short--logo">
+                      <img src="https://files.constantcontact.com/d8886d29001/a42c74df-c569-42ff-8217-79afba6022a8.png?rdr=true" alt="mini logo">
+                  </div>
+                  <div class="short--text">
+                    <p class="short--text-small">
+                      FOR IMMEDIATE RELEASE
+                    </p>
+                    <p class="short--text-big">
+                      Lorem ipsum dolor sit. Consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+                <div class="product-about">
+                  <img class="product--img" src="https://files.constantcontact.com/d8886d29001/c4f99ba1-87dc-4bb5-878b-cf5d102acfe7.jpg?rdr=true" alt="about">
+                  <div class="product-content">
+                    <h6>Name of products:</h6>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam recusandae provident, ratione soluta ipsum! Mollitia veritatis amet distinctio impedit.
+                    </p>
+
+                    <h6>Hazards:</h6>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam recusandae provident, ratione soluta ipsum! Mollitia veritatis amet distinctio impedit.
+                    </p>
+
+                    <!-- red notes  -->
+                    <div class="alert">
+                      <a href="#" class="red--notice">
+                        Lorem, ipsum dolor sit 
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                 <!-- line  -->
+                 <div class="line"></div>
+                 <h5 class="country">
+                  New York’s Evidence Company
+                </div>
+              </h5>
+            </div>
+            <div class="news">
+              <h3 class="news-title">
+                Primary Services
+              </h3>
+              <div class="card card-1">
+                <ul>
+                  <li><a href="#"><img class="card-images" src="https://files.constantcontact.com/d8886d29001/2f318d9c-f9eb-4836-82ca-a8fc67e7145e.png?rdr=true" alt="pickup"></a>
+                    <strong class="strong-text">PICKUP</strong></li>
+                  <li><a href="#"><img class="card-images" src="https://files.constantcontact.com/d8886d29001/5dd18ab7-2b17-44c8-95d5-e26c524254c9.png?rdr=true" alt="storage"></a>
+                    <strong class="strong-text">STORAGE</strong></li>
+                  <li><a href="#"><img class="card-images lab-img" src="https://files.constantcontact.com/d8886d29001/e07fb002-1406-4783-9730-a1525ea10aa6.png?rdr=true" alt="lab"></a>
+                    <strong class="strong-text">LAB</strong></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- <footer></footer> -->
+          <div class="line-mid"></div>
+          <div class="other-services">
+            <h6 class="services-title" style="text-align:center; font-size: 18px;">
+            Secondary Services
+          </h6>
+          <div class="service-list">
+            <ul>
+              <li><img class="service-images" src="https://files.constantcontact.com/d8886d29001/a3957fd1-caef-474a-9cfa-5742d58dcaa3.jpg?rdr=true" alt="Forensic"><strong class="strong-text">Videographers</strong></li>
+              <li><img class="service-images" src="https://files.constantcontact.com/d8886d29001/06dda7fb-03ee-4eee-83a7-da4b1e399db1.png?rdr=true" alt="X-Ray Device"><strong class="strong-text">X-Ray Services</strong></li>
+            </ul>
+            <ul>
+              <li><img class="service-images" src="https://files.constantcontact.com/d8886d29001/cf2d636c-0a56-4901-b4b6-732be2f779b1.jpg?rdr=true" alt="3D Scanner"><strong class="strong-text">3D Scanning</strong></li>
+              <li><img class="service-images" src="https://files.constantcontact.com/d8886d29001/9f045ed1-6ceb-4150-8998-e7b6698aceef.jpg?rdr=true" alt="Aerial Drone"><strong class="strong-text">Aerial Drones</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="line-bottom"></div>
+        <div class="social-layout">
+          <ul>
+            <li><a href="#"><img src="https://files.constantcontact.com/d8886d29001/18c65912-5835-4d51-8453-4c66bfcc16c0.png?rdr=true" alt="outer link"></a></li>
+            <li><a href="#"><img src="https://files.constantcontact.com/d8886d29001/4ecaf306-9e2b-4608-89a4-99857307e7ec.png?rdr=true" alt="outer link"></a></li>
+            <li><a href="https://www.evidenceservices.com/"><img src="https://files.constantcontact.com/d8886d29001/4fc48fa7-8a92-4a62-8208-56c34b512d55.png?rdr=true" alt="outer link"></a></li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>
